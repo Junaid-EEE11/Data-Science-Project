@@ -12,23 +12,6 @@ data sources used in my project is my Official in xcel format.To access the data
 
 Provide an outline of the project's directory structure and the purpose of each directory or file.
 
-```
-/
-  |- data/
-  |    |- raw/
-  |    |    |- dataset.csv
-  |    |- processed/
-  |         |- cleaned_data.csv
-  |- notebooks/
-  |    |- exploratory_analysis.ipynb
-  |    |- data_preprocessing.ipynb
-  |    |- model_training.ipynb
-  |- src/
-  |    |- data_preprocessing.py
-  |    |- model.py
-  |- README.md
-```
-
 ## Dependencies
 
 List the external libraries and packages your project depends on, including their versions. You can also include instructions for setting up a virtual environment.
