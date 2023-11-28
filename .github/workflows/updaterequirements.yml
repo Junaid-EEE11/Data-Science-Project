@@ -27,10 +27,11 @@ jobs:
       - name: Generate updated requirements.txt
         run: |
           python -m pip freeze > ${{ github.workspace }}/requirements.txt
-      - name: Show Root Directory
+      - name: Commit Changes
         run: |
-          ls ${{ github.workspace }}
-      - name: List Files in Root Directory
-        run: |
-          ls -R ${{ github.workspace }}
+          git config --local user.email "junaid.buet.eee11@gmail.com"
+          git config --local user.name "Junaid-EEE11"
+          git add .
+          git commit -m "Update file via GitHub Actions"
+          git push
 
