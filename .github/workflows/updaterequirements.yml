@@ -1,4 +1,5 @@
 name: Update Requirements
+
 on:
   push:
     branches:
@@ -10,7 +11,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -22,5 +23,4 @@ jobs:
 
       - name: Generate updated requirements.txt
         run: |
-          pip freeze | grep -i ordhek >> requirements.txt
           python -m pip freeze > requirements.txt
