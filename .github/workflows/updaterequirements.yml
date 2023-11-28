@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+      - name: Show Root Directory
+        run: |
+          ls ${{ github.workspace }}
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -23,4 +26,4 @@ jobs:
 
       - name: Generate updated requirements.txt
         run: |
-          python -m pip freeze > requirements.txt
+          python -m pip freeze > ${{ github.workspace }}/requirements.txt
