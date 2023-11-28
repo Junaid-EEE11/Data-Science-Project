@@ -29,4 +29,8 @@ jobs:
           python -m pip freeze > ${{ github.workspace }}/requirements.txt
       - name: Show Root Directory
         run: |
-          ls ${{ github.workspace }}    
+          ls ${{ github.workspace }}
+      - name: List Files in Root Directory
+        run: |
+          ls -R ${{ github.workspace }}
+
