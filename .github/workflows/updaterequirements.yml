@@ -27,3 +27,6 @@ jobs:
       - name: Generate updated requirements.txt
         run: |
           python -m pip freeze > ${{ github.workspace }}/requirements.txt
+      - name: Show Root Directory
+        run: |
+          ls ${{ github.workspace }}    
